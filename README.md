@@ -1,6 +1,6 @@
 [![Slack Room][slack-badge]][slack-link]
 
-# Autojump
+# Fzf
 
 **fzf** provides efficient keybindings for the [fzf](https://github.com/junegunn/fzf) utility.
 
