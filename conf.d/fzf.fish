@@ -1,6 +1,3 @@
-# Due to a bug of fish, we cannot use command substitution,
-# so we use temporary file instead
-
 if [ -z "$TMPDIR" ]
   set -g TMPDIR /tmp
 end
