@@ -2,7 +2,7 @@
 
 # Autojump
 
-**fzf** provides effecient keybindings for the [fzf](https://github.com/junegunn/fzf) utility.
+**fzf** provides efficient keybindings for the [fzf](https://github.com/junegunn/fzf) utility.
 
 ## Install
 
