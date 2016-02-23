@@ -3,9 +3,8 @@ function __fzf_alt_c
   command find -L . \\( -path '*/\\.*' -o -fstype 'dev' -o -fstype 'proc' \\) -prune \
     -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
   # Fish hangs if the command before pipe redirects (2> /dev/null)
-  eval "$FZF_ALT_C_COMMAND | "(__fzfcmd)" +m > $TMPDIR/fzf.result"
-  [ (cat $TMPDIR/fzf.result | wc -l) -gt 0 ]
-  and cd (cat $TMPDIR/fzf.result)
+  eval $FZF_ALT_C_COMMAND | eval (__fzfcmd) +m | read -l fzf_last_select [$fzf_last_select]
+  # [ (echo $fzf_last_select | wc -l) -gt 0 ]
+  and cd $fzf_last_select
   commandline -f repaint
-  rm -f $TMPDIR/fzf.result
 end
