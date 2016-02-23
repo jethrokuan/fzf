@@ -1,8 +1,8 @@
 function __fzf_ctrl_x
-  history | eval (__fzfcmd) +s +m --tiebreak=index --toggle-sort=ctrl-r | read -l fzf_last_select [$fzf_last_select];
+  history | eval (__fzfcmd) +s +m --tiebreak=index --toggle-sort=ctrl-r | read -l select
   and echo "
 ------
-Running command: $fzf_last_select
+Running command: $select
 ------"
   and eval $fzf_last_select
   commandline -f repaint
