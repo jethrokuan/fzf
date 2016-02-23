@@ -4,7 +4,7 @@ function __fzf_ctrl_t
     -o -type f -print \
     -o -type d -print \
     -o -type l -print 2> /dev/null | sed 1d | cut -b3-"
-  eval $FZF_CTRL_T_COMMAND | eval (__fzfcmd) -m | read -laz selects
-  and commandline -i (echo $selects | tr "\n" " ")
+  eval $FZF_CTRL_T_COMMAND | eval (__fzfcmd) -m | __fzfescape | read -laz selects
+  and commandline -i (for i in $selects; printf '%s ' $i; end )
   commandline -f repaint
 end
