@@ -5,7 +5,7 @@ function __fzf_alt_c
   # Fish hangs if the command before pipe redirects (2> /dev/null)
   eval $FZF_ALT_C_COMMAND | eval (__fzfcmd) +m | read -l fzf_last_select [$fzf_last_select]
   echo $fzf_last_select
-  if not test -z $fzf_last_select
+  if test -n "$fzf_last_select"
     cd $fzf_last_select
   end
   commandline -f repaint

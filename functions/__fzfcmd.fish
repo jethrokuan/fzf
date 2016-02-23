@@ -1,8 +1,8 @@
 function __fzfcmd
   if not set -q FZF_TMUX
-    set FZF_TMUX 1
+    set FZF_TMUX 0
   end
-  if [ $FZF_TMUX -eq 1 ]
+  if test $FZF_TMUX -eq 1
     if set -q FZF_TMUX_HEIGHT
       echo "fzf-tmux -d$FZF_TMUX_HEIGHT"
     else
