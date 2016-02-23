@@ -1,14 +1,9 @@
 function __fzfcmd
-  if not set -q FZF_TMUX
-    set FZF_TMUX 0
-  end
-  if test $FZF_TMUX -eq 1
-    if set -q FZF_TMUX_HEIGHT
-      echo "fzf-tmux -d$FZF_TMUX_HEIGHT"
-    else
-      echo "fzf-tmux -d40%"
-    end
+  set -q FZF_TMUX; or set -l FZF_TMUX 0
+  if test "$FZF_TMUX" -eq 1
+    set -q FZF_TMUX_HEIGHT; or set -l FZF_TMUX_HEIGHT 40%
+    fzf-tmux -d$FZF_TMUX_HEIGHT $argv
   else
-    echo "fzf"
+    fzf $argv
   end
 end
