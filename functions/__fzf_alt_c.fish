@@ -4,8 +4,8 @@ function __fzf_alt_c
     -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
   # Fish hangs if the command before pipe redirects (2> /dev/null)
   eval $FZF_ALT_C_COMMAND | __fzfcmd +m | read -l select [$select]
-  if test ! -z "$select"
-    cd $fselect
+  if test ! -z $select
+    cd $select
   end
   commandline -f repaint
 end
