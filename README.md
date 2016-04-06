@@ -11,7 +11,7 @@ Minimum fish version: `2.2.0`
 With [Fisherman]
 
 ```
-fisher install jethrokuan/fish-fzf
+fisher install fzf
 ```
 
 ## Usage
