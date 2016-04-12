@@ -7,6 +7,9 @@
 ## Install
 
 Minimum fish version: `2.2.0`
+Compatible fzf versions: `0.11.3`
+
+_That's the fzf version I'm using, and it works. If anyone gets it working on other versions, feel free to let me know/make a PR here._
 
 With [Fisherman]
 
@@ -23,6 +26,12 @@ fisher install fzf
 [slack-link]: https://fisherman-wharf.herokuapp.com/
 [slack-badge]: https://img.shields.io/badge/slack-join%20the%20chat-00B9FF.svg?style=flat-square
 [Fisherman]: https://github.com/fisherman/fisherman
+
+## Variables
+
+### `FZF_TMUX`
+If you're a [tmux] user, run `set -U FZF_TMUX 1`. This makes fish run the more tmux-compatible `fzf-tmux`.
+
 
 ## License
 The MIT License (MIT)
@@ -44,3 +53,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+[tmux]:https://tmux.github.io/
