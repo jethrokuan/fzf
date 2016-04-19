@@ -11,10 +11,16 @@ Compatible fzf versions: `0.11.3`
 
 _That's the fzf version I'm using, and it works. If anyone gets it working on other versions, feel free to let me know/make a PR here._
 
-With [Fisherman]
+With [fisherman]
 
 ```
-fisher install fzf
+fisher i fzf
+```
+
+With [fin]
+
+```
+fin fzf
 ```
 
 ## Usage
@@ -25,7 +31,8 @@ fisher install fzf
 
 [slack-link]: https://fisherman-wharf.herokuapp.com/
 [slack-badge]: https://img.shields.io/badge/slack-join%20the%20chat-00B9FF.svg?style=flat-square
-[Fisherman]: https://github.com/fisherman/fisherman
+[fisherman]: https://github.com/fisherman/fisherman
+[fin]: https://github.com/fisherman/fin
 
 ## Variables
 
