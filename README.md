@@ -14,13 +14,7 @@ _That's the fzf version I'm using, and it works. If anyone gets it working on ot
 With [fisherman]
 
 ```
-fisher i fzf
-```
-
-With [fin]
-
-```
-fin fzf
+fisher fzf
 ```
 
 ## Usage
