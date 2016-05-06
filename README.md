@@ -15,7 +15,14 @@ fisher fzf
 ## Notes
 
 Required fish version: `2.2.0`
-Compatible fzf versions: `0.11.3`
+Compatible fzf versions: `>0.11.3`
+
+## FZF binary
+If the fzf binary is not detected in PATH, activating the key bindings will attempt to install it. The install directory is `$HOME/.fzf`.
+
+If you wish to uninstall this binary at a later point, I've included an installer that should properly clean it away.
+
+Note that the binary is installed only for the current user.
 
 ## Usage
 
