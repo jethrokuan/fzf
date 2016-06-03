@@ -1,20 +1,20 @@
 function __fzf_install
     set -l archi (uname -sm)
-    set -l vers "0.12.1"
+    set -l vers "0.12.2"
 
     set -l pkg
     switch $archi
-        case Linux\ x86_64
-            set pkg "fzf-$vers-linux_amd64"
-        case Darwin\ x86_64
-            set pkg "fzf-$vers-darwin_amd64"
-        case Linux\ i*86
-            set pkg "fzf-$vers-linux_386"
-        case Darwin\  i*86
-            set pkg "fzf-$vers-darwin_386"
-        case *
-            printf "Your system is does not support prebuilt binaries.\n"
-            return 0
+      case Linux\ x86_64
+        set pkg "fzf-$vers-linux_amd64"
+      case Darwin\ x86_64
+        set pkg "fzf-$vers-darwin_amd64"
+      case Linux\ i*86
+        set pkg "fzf-$vers-linux_386"
+      case Darwin\  i*86
+        set pkg "fzf-$vers-darwin_386"
+      case *
+        printf "Your system is does not support prebuilt binaries.\n"
+        return 0
     end
 
     set -l url "https://github.com/junegunn/fzf-bin/releases/download/$vers/$pkg.tgz"
@@ -24,9 +24,9 @@ function __fzf_install
     pushd "$HOME/.fzf/bin"
 
     if type -q curl
-        curl -sfL "$url" | tar -xz
+      curl -sfL "$url" | tar -xz
     else if type -q wget
-        wget -O - "$url" | tar -xz
+      wget -O - "$url" | tar -xz
     end
 
     mv $pkg "fzf"
@@ -34,22 +34,22 @@ function __fzf_install
 
     set -l in_user_paths false
     for x in $fish_user_paths
-        if test "$x" = "$HOME/.fzf/bin"
-            set in_user_paths true
-            break
-        end
+      if test "$x" = "$HOME/.fzf/bin"
+        set in_user_paths true
+        break
+      end
     end
 
     if test "$in_user_paths" = "false"
-        set -U fish_user_paths $fish_user_paths "$HOME/.fzf/bin"
+      set -U fish_user_paths $fish_user_paths "$HOME/.fzf/bin"
     end
 
     popd
 
     if type -q fzf
-        printf "Successfully Installed"
-        return 1
+      printf "Successfully Installed"
+      return 1
     else
-        return 0
+      return 0
     end
 end
