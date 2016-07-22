@@ -2,6 +2,12 @@ function __fzf_install
     set -l archi (uname -sm)
     set -l vers "0.13.3"
 
+    if test -d "$HOME/.fzf"
+      echo "$HOME/.fzf is a directory, fzf might already be installed. Removing folder and trying again..."
+      rm -rf "$HOME/.fzf"
+      __fzf_install
+    end
+
     set -l pkg
     switch $archi
       case Linux\ x86_64
