@@ -53,7 +53,7 @@ function __fzf_install
     popd
 
     if type -q fzf
-      printf "Successfully Installed"
+      printf "Successfully Installed\n"
       return 1
     else
       return 0
