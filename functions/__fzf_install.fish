@@ -1,6 +1,6 @@
 function __fzf_install
     set -l archi (uname -sm)
-    set -l vers "0.12.2"
+    set -l vers "0.13.3"
 
     set -l pkg
     switch $archi
