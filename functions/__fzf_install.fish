@@ -1,6 +1,7 @@
 function __fzf_install
     set -l archi (uname -sm)
-    set -l vers "0.13.3"
+    set -l github_api_endpoint "https://api.github.com/repos/junegunn/fzf-bin/releases/latest"
+    set -l vers (curl -s $github_api_endpoint | sed -n 's/[[:space:]]*"tag_name": "\([0-9.]*\)",/\1/p')
 
     if test -d "$HOME/.fzf"
       echo "$HOME/.fzf is a directory, fzf might already be installed. Removing folder and trying again..."
