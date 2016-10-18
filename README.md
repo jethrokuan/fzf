@@ -30,6 +30,7 @@ Note that the binary is installed only for the current user.
 - Ctrl-r: search past commands
 - Ctrl-x: execute past commands without confirmation
 - Alt-c: cd into directories
+- Alt-Shift-c (or Alt-C): cd into directories, including dot (hidden) ones
 
 On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can send the right escape sequence with Esc-c. If you configure the option key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys > Left option (⌥) acts as: > +Esc), then alt-c will work for fzf as documented.
 
