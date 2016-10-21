@@ -8,7 +8,7 @@ function __fzf_alt_shift_c
   fish -c "$FZF_ALT_SHIFT_C_COMMAND" | __fzfcmd -m $FZF_ALT_SHIFT_C_OPTS | \
     read -la select
   if test ! (count $select) -eq 0
-    cd $select
+    cd "$select"
   end
   commandline -f repaint
 end

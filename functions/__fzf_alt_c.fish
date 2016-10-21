@@ -6,7 +6,7 @@ function __fzf_alt_c
   # Fish hangs if the command before pipe redirects (2> /dev/null)
   fish -c "$FZF_ALT_C_COMMAND" | __fzfcmd -m $FZF_ALT_C_OPTS | read -la select
   if test ! (count $select) -eq 0
-    cd $select
+    cd "$select"
   end
   commandline -f repaint
 end
