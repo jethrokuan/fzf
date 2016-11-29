@@ -20,25 +20,41 @@ fisher fzf
 ## FZF binary
 If the fzf binary is not detected in PATH, activating the key bindings will attempt to install it. The install directory is `$HOME/.fzf`.
 
-If you wish to uninstall this binary at a later point, I've included an installer that should properly clean it away.
+If you wish to uninstall the binary, run:
 
-Note that the binary is installed only for the current user.
+```
+__fzf_uninstall
+```
+
+Note that the binary is only installed for the current user.
 
 ## Usage
 
-- Ctrl-t: file finder (multi-select enabled)
-- Ctrl-r: search past commands
-- Ctrl-x: execute past commands without confirmation
-- Alt-c: cd into directories
-- Alt-Shift-c (or Alt-C): cd into directories, including dot (hidden) ones
+| Legacy      | New Keybindings   | Remarks                                                       |
+| -------     | ----------------- | ------------------------------------------------------------- |
+| Ctrl-t      | Ctrl-f            | Find a file.                                                  |
+| Ctrl-r      | Ctrl-r            | Similar to ^                                                  |
+| Ctrl-x      | Alt-x             | Does the reverse isearch, and immediately executes command.   |
+| Alt-c       | Alt-d             | cd into sub-directories (recursively searched).               |
+| Alt-Shift-c | Alt-Shift-d       | cd into sub-directories, including hidden ones.               |
 
-On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can send the right escape sequence with Esc-c. If you configure the option key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys > Left option (⌥) acts as: > +Esc), then alt-c will work for fzf as documented.
+Legacy keybindings are kept by default, but these have conflict with keybindings in fish 2.4.0. If you want to use the new keybindings, enter the following into your terminal:
+
+```
+set -U FZF_LEGACY_KEYBINDINGS 0
+```
+
+NOTE: On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can send the right escape sequence with Esc-c. If you configure the option key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys > Left option (⌥) acts as: > +Esc), then alt-c will work for fzf as documented.
 
 ## Variables
-
-### `FZF_TMUX`
-
-If you're a [tmux] user, run `set -U FZF_TMUX 1`. This makes fish run the more tmux-compatible `fzf-tmux`.
+| Variable                    | Remarks                                                       | Example                                               |
+| --------------------------- | ------------------------------------------------------------- | ----------------------------------------------------  |
+| `FZF_FIND_FILE_OPTS`        | Pass in additional arguments to the fzf command for find file | `set -U FZF_FIND_FILE_OPTS "--reverse --inline-info"` |
+| `FZF_CD_OPTS`               | Similar to ^                                                  | Similar to ^                                          |
+| `FZF_CD_WITH_HIDDEN_OPTS`   | Similar to ^                                                  | Similar to ^                                          |
+| `FZF_FIND_AND_EXECUTE_OPTS` | Similar to ^                                                  | Similar to ^                                          |
+| `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                  | Similar to ^                                          |
+| `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                  | `set -U FZF_TMUX 1`                                   |
 
 [tmux]:https://tmux.github.io/
 [slack-link]: https://fisherman-wharf.herokuapp.com
