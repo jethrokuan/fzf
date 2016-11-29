@@ -14,9 +14,9 @@ function __fzf_install
           set pkg "fzf-$vers-linux_amd64"
         case Darwin\ x86_64
           set pkg "fzf-$vers-darwin_amd64"
-        case Linux\ i*86
+        case Linux\ i\*86
           set pkg "fzf-$vers-linux_386"
-        case Darwin\  i*86
+        case Darwin\ i\*86
           set pkg "fzf-$vers-darwin_386"
         case *
           printf "Your system is does not support prebuilt binaries.\n"
