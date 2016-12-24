@@ -12,6 +12,12 @@ With [fisherman]
 fisher fzf
 ```
 
+Then, install the `fzf` utility by running:
+
+```
+__fzf_install
+```
+
 ## Notes
 
 * Required fish version: `>=2.2.0`
