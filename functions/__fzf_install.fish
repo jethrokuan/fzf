@@ -1,7 +1,7 @@
 function __fzf_install
     if not type -q "fzf"
-        get --prompt "Where would you like to install it? (default \"$HOME/.fzf\")\n->" --default "$HOME/.fzf" -r "\([^\0 !$`&*()+]\|\\\(\ |\!|\$|\`|\&|\*|\(|\)|\+\)\)\+" | read -l install_dir
-        set -U FZF_DIR $install_dir
+      get --prompt "Where would you like to install it? (default \"$HOME/.fzf\")\n->" --default "$HOME/.fzf" -r '\([^\0 !$`&*()+]\|\\\(\ |\!|\$|\`|\&|\*|\(|\)|\+\)\)\+' | read -l install_dir
+      set -U FZF_DIR $install_dir
     else
         echo "fzf already installed."
         return 1
