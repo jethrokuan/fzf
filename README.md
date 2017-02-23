@@ -52,6 +52,16 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 
 NOTE: On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can send the right escape sequence with Esc-c. If you configure the option key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys > Left option (⌥) acts as: > +Esc), then alt-c will work for fzf as documented.
 
+
+## Commands
+| Variable                       | Remarks                                               | Example                                                       |
+| ------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------- |
+| `FZF_FIND_FILE_COMMAND`        | Modify the command used to generate the list of files | `set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"` |
+| `FZF_CD_COMMAND`               | Similar to ^                                          | Similar to ^                                                  |
+| `FZF_CD_WITH_HIDDEN_COMMAND`   | Similar to ^                                          | Similar to ^                                                  |
+| `FZF_FIND_AND_EXECUTE_COMMAND` | Similar to ^                                          | Similar to ^                                                  |
+| `FZF_REVERSE_ISEARCH_COMMAND`  | Similar to ^                                          | Similar to ^                                                  |
+
 ## Variables
 | Variable                    | Remarks                                                       | Example                                               |
 | --------------------------- | ------------------------------------------------------------- | ----------------------------------------------------  |
