@@ -5,7 +5,7 @@ function __fzf_find_file
   -o -type f -print \
   -o -type d -print \
   -o -type l -print 2> /dev/null | sed 1d | cut -b3-"
-  fish -c "$FZF_FIND_FILE_COMMAND" | __fzfcmd -m $FZF_FIND_FILE_OPTS | while read -l s; set selects $selects $s; end
+  fish -c "$FZF_FIND_FILE_COMMAND" | __fzfcmd -m $FZF_DEFAULT_OPTS $FZF_FIND_FILE_OPTS | while read -l s; set selects $selects $s; end
   if not test "$dir" = "."
     commandline -t ""
   end
