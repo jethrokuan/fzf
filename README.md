@@ -63,16 +63,16 @@ NOTE: On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can send the
 | `FZF_REVERSE_ISEARCH_COMMAND`  | Similar to ^                                          | Similar to ^                                                  |
 
 ## Variables
-
-| Variable                    | Remarks                                                       | Example                                               |
-| --------------------------- | ------------------------------------------------------------- | ----------------------------------------------------  |
-| `FZF_DEFAULT_OPTS`          | Default options passed to every fzf command                   | `set -U FZF_DEFAULT_OPTS "--height 40"`               |
-| `FZF_FIND_FILE_OPTS`        | Pass in additional arguments to the fzf command for find file | `set -U FZF_FIND_FILE_OPTS "--reverse --inline-info"` |
-| `FZF_CD_OPTS`               | Similar to ^                                                  | Similar to ^                                          |
-| `FZF_CD_WITH_HIDDEN_OPTS`   | Similar to ^                                                  | Similar to ^                                          |
-| `FZF_FIND_AND_EXECUTE_OPTS` | Similar to ^                                                  | Similar to ^                                          |
-| `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                  | Similar to ^                                          |
-| `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                  | `set -U FZF_TMUX 1`                                   |
+| Variable                    | Remarks                                                        | Example                                               |
+| --------------------------- | -------------------------------------------------------------- | ----------------------------------------------------  |
+| `FZF_ABSOLUTE_PATHS`        | Use absolute paths when resolving files with `__fzf_find_file` | `set -U FZF_ABSOLUTE_PATHS" 1`                        |
+| `FZF_DEFAULT_OPTS`          | Default options passed to every fzf command                    | `set -U FZF_DEFAULT_OPTS "--height 40"`               |
+| `FZF_FIND_FILE_OPTS`        | Pass in additional arguments to the fzf command for find file  | `set -U FZF_FIND_FILE_OPTS "--reverse --inline-info"` |
+| `FZF_CD_OPTS`               | Similar to ^                                                   | Similar to ^                                          |
+| `FZF_CD_WITH_HIDDEN_OPTS`   | Similar to ^                                                   | Similar to ^                                          |
+| `FZF_FIND_AND_EXECUTE_OPTS` | Similar to ^                                                   | Similar to ^                                          |
+| `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                   | Similar to ^                                          |
+| `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                   | `set -U FZF_TMUX 1`                                   |
 
 [tmux]:https://tmux.github.io/
 [slack-link]: https://fisherman-wharf.herokuapp.com
