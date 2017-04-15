@@ -20,13 +20,19 @@ __fzf_install
 
 ## Notes
 
-* Required fish version: `>=2.2.0`
+* Required fish version: `>=2.4.0`
 * Compatible fzf versions: `>0.11.3`
 
 ## FZF binary
-If the fzf binary is not detected in PATH, activating the key bindings will attempt to install it. The install directory is `$HOME/.fzf`.
+This plugin will fail if the `fzf` binary is not detected in your `PATH`.
 
-If you wish to uninstall the binary, run:
+The recommended means of installing `fzf` is through your respective package managers. However, if you do wish to install the latest version, simply run:
+
+```
+__fzf_install
+```
+
+If you later wish to uninstall the binary, run:
 
 ```
 __fzf_uninstall

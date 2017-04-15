@@ -1,7 +1,7 @@
 function __fzf_reverse_isearch
-  __fish_history | __fzfcmd +s --tiebreak=index --toggle-sort=ctrl-r -q (commandline) $FZF_DEFAULT_OPTS $FZF_REVERSE_ISEARCH_OPTS | read -l select
+  builtin history --null | __fzfcmd --read0 +s --tiebreak=index --toggle-sort=ctrl-r -q (commandline) $FZF_DEFAULT_OPTS $FZF_REVERSE_ISEARCH_OPTS | read -z select
   if not test -z $select
-    commandline -rb "$select"
+    commandline -rb (builtin string trim "$select")
     commandline -f repaint
   end
 end
