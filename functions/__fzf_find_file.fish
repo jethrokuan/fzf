@@ -4,7 +4,7 @@ function __fzf_find_file
     -o -type f -print \
     -o -type d -print \
     -o -type l -print 2> /dev/null"
-  fish -c "$FZF_FIND_FILE_COMMAND" | __fzfcmd -m $FZF_DEFAULT_OPTS $FZF_FIND_FILE_OPTS | while read -l s; set selects $selects $s; end
+  fish -c "$FZF_FIND_FILE_COMMAND" | eval "__fzfcmd -m $FZF_DEFAULT_OPTS $FZF_FIND_FILE_OPTS" | while read -l s; set selects $selects $s; end
   for select in $selects
     commandline -it -- "\"$select\""
     commandline -it -- " "
