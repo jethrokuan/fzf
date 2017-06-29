@@ -41,8 +41,8 @@ Note that the binary is only installed for the current user.
 | Ctrl-t      | Ctrl-f            | Find a file.                                                  |
 | Ctrl-r      | Ctrl-r            | Similar to ^                                                  |
 | Ctrl-x      | Alt-x             | Does the reverse isearch, and immediately executes command.   |
-| Alt-c       | Alt-d             | cd into sub-directories (recursively searched).               |
-| Alt-Shift-c | Alt-Shift-d       | cd into sub-directories, including hidden ones.               |
+| Alt-c       | Alt-o             | cd into sub-directories (recursively searched).               |
+| Alt-Shift-c | Alt-Shift-o       | cd into sub-directories, including hidden ones.               |
 
 Legacy keybindings are kept by default, but these have conflict with keybindings in fish 2.4.0. If you want to use the new keybindings, enter the following into your terminal:
 
