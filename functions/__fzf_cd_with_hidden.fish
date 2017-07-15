@@ -5,7 +5,7 @@ function __fzf_cd_with_hidden
   \\( -path '*/\\.git*' -o -fstype 'dev' -o -fstype 'proc' \\) -prune \
   -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
   # Fish hangs if the command before pipe redirects (2> /dev/null)
-  fish -c "$FZF_CD_WITH_HIDDEN_COMMAND" | eval "__fzfcmd -m $FZF_DEFAULT_OPTS $FZF_CD_WITH_HIDDEN_OPTS" | \
+  eval "$FZF_CD_WITH_HIDDEN_COMMAND" | eval "__fzfcmd -m $FZF_DEFAULT_OPTS $FZF_CD_WITH_HIDDEN_OPTS" | \
   read -la select
   if test ! (count $select) -eq 0
     cd "$select"
