@@ -20,37 +20,32 @@ fisher fzf
 ## FZF binary
 This plugin will fail if the `fzf` binary is not detected in your `PATH`.
 
-The recommended means of installing `fzf` is through your respective package managers. However, if you do wish to install the latest version, simply run:
-
-```
-__fzf_install
-```
-
-If you later wish to uninstall the binary, run:
-
-```
-__fzf_uninstall
-```
-
-Note that the binary is only installed for the current user.
+The recommended means of installing `fzf` is through your respective
+package managers. 
 
 ## Usage
 
 | Legacy      | New Keybindings   | Remarks                                                       |
 | -------     | ----------------- | ------------------------------------------------------------- |
 | Ctrl-t      | Ctrl-f            | Find a file.                                                  |
-| Ctrl-r      | Ctrl-r            | Similar to ^                                                  |
+| Ctrl-r      | Ctrl-r            | Search through command history.                               |
 | Ctrl-x      | Alt-x             | Does the reverse isearch, and immediately executes command.   |
 | Alt-c       | Alt-o             | cd into sub-directories (recursively searched).               |
 | Alt-Shift-c | Alt-Shift-o       | cd into sub-directories, including hidden ones.               |
 
-Legacy keybindings are kept by default, but these have conflict with keybindings in fish 2.4.0. If you want to use the new keybindings, enter the following into your terminal:
+Legacy keybindings are kept by default, but these have conflict with
+keybindings in fish 2.4.0. If you want to use the new keybindings,
+enter the following into your terminal:
 
 ```
 set -U FZF_LEGACY_KEYBINDINGS 0
 ```
 
-NOTE: On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can send the right escape sequence with Esc-c. If you configure the option key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys > Left option (⌥) acts as: > +Esc), then alt-c will work for fzf as documented.
+NOTE: On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can
+send the right escape sequence with Esc-c. If you configure the option
+key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys >
+Left option (⌥) acts as: > +Esc), then alt-c will work for fzf as
+documented.
 
 
 ## Commands
