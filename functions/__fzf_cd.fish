@@ -26,7 +26,7 @@ function __fzf_cd -d "Change directory"
         set COMMAND $FZF_CD_COMMAND
     end
 
-    eval "$COMMAND | "(__fzfcmd)' +m --query "'$fzf_query'"' | read -l select
+    eval "$COMMAND | "(__fzfcmd)' +m $FZF_DEFAULT_OPTS $FZF_CD_OPTS --query "'$fzf_query'"' | read -l select
 
     if not test -z "$select"
         cd "$select"
