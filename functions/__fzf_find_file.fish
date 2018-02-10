@@ -11,7 +11,7 @@ function __fzf_find_file -d "List files and folders"
     -o -type l -print 2> /dev/null | sed 's@^\./@@'"
 
     begin
-        eval "$FZF_FIND_FILE_COMMAND | "(__fzfcmd) '-m --query "'$fzf_query'"' | while read -l s; set results $results $s; end
+        eval "$FZF_FIND_FILE_COMMAND | "(__fzfcmd) '-m $FZF_DEFAULT_OPTS $FZF_FIND_FILE_OPTS --query "'$fzf_query'"' | while read -l s; set results $results $s; end
     end
 
     if test -z "$results"
