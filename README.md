@@ -67,6 +67,7 @@ documented.
 | `FZF_FIND_AND_EXECUTE_OPTS` | Similar to ^                                                   | Similar to ^                                          |
 | `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                   | Similar to ^                                          |
 | `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                   | `set -U FZF_TMUX 1`                                   |
+| `FZF_COMPLETE`              | Enable fzf for fish tab completion.                            | `set -U FZF_COMPLETE 1`                               |
 
 [tmux]:https://tmux.github.io/
 [slack-link]: https://fisherman-wharf.herokuapp.com

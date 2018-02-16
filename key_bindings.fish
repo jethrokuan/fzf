@@ -24,3 +24,5 @@ else
         bind -M insert \eO '__fzf_cd --hidden'
     end
 end
+
+set -q FZF_COMPLETE ;and bind \t '__fzf_complete'
