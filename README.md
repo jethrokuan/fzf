@@ -29,7 +29,6 @@ package managers.
 | -------     | ----------------- | ------------------------------------------------------------- |
 | Ctrl-t      | Ctrl-f            | Find a file.                                                  |
 | Ctrl-r      | Ctrl-r            | Search through command history.                               |
-| Ctrl-x      | Alt-x             | Does the reverse isearch, and immediately executes command.   |
 | Alt-c       | Alt-o             | cd into sub-directories (recursively searched).               |
 | Alt-Shift-c | Alt-Shift-o       | cd into sub-directories, including hidden ones.               |
 
