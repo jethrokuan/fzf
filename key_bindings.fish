@@ -24,4 +24,6 @@ else
     end
 end
 
-set -q FZF_COMPLETE ;and bind \t '__fzf_complete'
+if set -q FZF_COMPLETE
+    bind \t '__fzf_complete'
+end
