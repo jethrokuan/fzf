@@ -3,7 +3,7 @@ function __fzf_open -d "Open files and directories"
     set -l dir $commandline[1]
     set -l fzf_query $commandline[2]
 
-    set -l options  "e/editor"
+    set -l options "e/editor"
 
     argparse $options -- $argv
 
@@ -21,6 +21,7 @@ function __fzf_open -d "Open files and directories"
             echo "editor"
             eval "$EDITOR $select"
         else
+            echo "open"
             open $select
         end
         commandline -t ""
