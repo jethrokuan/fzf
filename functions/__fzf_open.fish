@@ -18,10 +18,8 @@ function __fzf_open -d "Open files and directories"
 
     if not test -z "$select"
         if set -q _flag_editor
-            echo "editor"
             eval "$EDITOR $select"
         else
-            echo "open"
             open $select
         end
         commandline -t ""
