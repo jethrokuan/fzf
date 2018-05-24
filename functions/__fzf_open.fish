@@ -5,6 +5,8 @@ function __fzf_open -d "Open files and directories"
 
     set -l options  "e/editor"
 
+    argparse $options -- $argv
+
     set -q FZF_OPEN_COMMAND
     or set -l FZF_OPEN_COMMAND "
     command find -L \$dir -mindepth 1 \\( -path \$dir'*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' \\) -prune \
@@ -16,6 +18,7 @@ function __fzf_open -d "Open files and directories"
 
     if not test -z "$select"
         if set -q _flag_editor
+            echo "editor"
             eval "$EDITOR $select"
         else
             open $select
