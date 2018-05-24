@@ -31,6 +31,8 @@ package managers.
 | Ctrl-r      | Ctrl-r            | Search through command history.                               |
 | Alt-c       | Alt-o             | cd into sub-directories (recursively searched).               |
 | Alt-Shift-c | Alt-Shift-o       | cd into sub-directories, including hidden ones.               |
+| Ctrl-o      | Ctrl-o            | Open a file/dir using default editor ($EDITOR)                |
+| Ctrl-g      | Ctrl-g            | Open a file/dir using fish's open command                     |
 
 Legacy keybindings are kept by default, but these have conflict with
 keybindings in fish 2.4.0. If you want to use the new keybindings,
@@ -55,6 +57,7 @@ documented.
 | `FZF_CD_WITH_HIDDEN_COMMAND`   | Similar to ^                                          | Similar to ^                                                  |
 | `FZF_FIND_AND_EXECUTE_COMMAND` | Similar to ^                                          | Similar to ^                                                  |
 | `FZF_REVERSE_ISEARCH_COMMAND`  | Similar to ^                                          | Similar to ^                                                  |
+| `FZF_OPEN_COMMAND`             | Similar to ^                                          | Similar to ^                                                  |
 
 ## Variables
 | Variable                    | Remarks                                                        | Example                                               |
@@ -65,6 +68,7 @@ documented.
 | `FZF_CD_WITH_HIDDEN_OPTS`   | Similar to ^                                                   | Similar to ^                                          |
 | `FZF_FIND_AND_EXECUTE_OPTS` | Similar to ^                                                   | Similar to ^                                          |
 | `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                   | Similar to ^                                          |
+| `FZF_OPEN_OPTS`             | Similar to ^                                                   | Similar to ^                                          |
 | `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                   | `set -U FZF_TMUX 1`                                   |
 | `FZF_COMPLETE`              | Enable fzf for fish tab completion.                            | `set -U FZF_COMPLETE 1`                               |
 

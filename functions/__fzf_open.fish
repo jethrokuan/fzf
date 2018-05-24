@@ -14,7 +14,7 @@ function __fzf_open -d "Open files and directories"
     -o -type d -print \
     -o -type l -print 2> /dev/null | sed 's@^\./@@'"
 
-    eval "$FZF_OPEN_COMMAND | "(__fzfcmd) "-m $FZF_DEFAULT_OPTS $FZF_FIND_FILE_OPTS --query \"$fzf_query\"" | read -l select
+    eval "$FZF_OPEN_COMMAND | "(__fzfcmd) "-m $FZF_DEFAULT_OPTS $FZF_OPEN_OPTS --query \"$fzf_query\"" | read -l select
 
     if not test -z "$select"
         if set -q _flag_editor
