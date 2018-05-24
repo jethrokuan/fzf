@@ -19,6 +19,7 @@ function __fzf_open -d "Open files and directories"
             eval "$EDITOR $select"
         else
             open $select
+        end
         commandline -t ""
     end
 
