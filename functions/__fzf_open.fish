@@ -35,10 +35,13 @@ function __fzf_open -d "Open files and directories."
         end
     end
 
+    set -l open_status 0
     if not test -z "$select"
         eval "$open_cmd $select"
+        set open_status $status
         commandline -t ""
     end
 
     commandline -f repaint
+    return $open_status
 end
