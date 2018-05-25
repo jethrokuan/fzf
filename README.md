@@ -32,7 +32,7 @@ package managers.
 | Alt-c       | Alt-o             | cd into sub-directories (recursively searched).               |
 | Alt-Shift-c | Alt-Shift-o       | cd into sub-directories, including hidden ones.               |
 | Ctrl-o      | Ctrl-o            | Open a file/dir using default editor ($EDITOR)                |
-| Ctrl-g      | Ctrl-g            | Open a file/dir using fish's open command                     |
+| Ctrl-g      | Ctrl-g            | Open a file/dir using xdg-open or open command                |
 
 Legacy keybindings are kept by default, but these have conflict with
 keybindings in fish 2.4.0. If you want to use the new keybindings,
