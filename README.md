@@ -2,8 +2,16 @@
 
 [![Slack Room][slack-badge]][slack-link]
 
-**fzf** provides efficient keybindings for the [fzf](https://github.com/junegunn/fzf) utility. Heavily adapted from @hauleth's PR.
+Integrate [fzf](https://github.com/junegunn/fzf) functionality into [fish](https://github.com/fish-shell/fish-shell)! Includes handy functions to do the following using `fzf`
 
+* command tab completion
+* search command history
+* find and cd into sub-directories
+* find and open files
+All with key bindings that are compatible with fish's default plugins. 
+Heavily adapted from @hauleth's PR.
+
+Note that the `fzf` utility has its [own out-of-the-box fish plugin](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish). What sets this plugin apart is that it has a couple more integrations, most notably tab completion, and will probably be updated more frequently. They are not compatible so either use one or the other.
 ## Install
 
 With [fisherman]
@@ -12,10 +20,10 @@ With [fisherman]
 fisher fzf
 ```
 
-## Notes
+## Requirements
 
-* Required fish version: `>=2.4.0`
-* Compatible fzf versions: `>0.11.3`
+* fish version: `>=2.4.0`
+* fzf versions: `>0.11.3`
 
 ## FZF binary
 This plugin will fail if the `fzf` binary is not detected in your `PATH`.
