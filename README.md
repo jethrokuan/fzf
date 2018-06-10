@@ -9,7 +9,12 @@ Integrate [fzf](https://github.com/junegunn/fzf) functionality into [fish](https
 * find and cd into sub-directories
 * find and open files
 
-All functions are lazily-loaded to keep shell startup time fast and have key bindings that are compatible with fish. Heavily adapted from @hauleth's PR.
+All functions
+
+* are lazily-loaded to keep shell startup time down
+* have key bindings that are compatible with fish's default bindings
+
+Heavily adapted from @hauleth's PR.
 
 Note that the `fzf` utility has its [own out-of-the-box fish plugin](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish). What sets this plugin apart is that it has a couple more integrations, most notably tab completion, and will probably be updated more frequently. They are not compatible so either use one or the other.
 ## Install
