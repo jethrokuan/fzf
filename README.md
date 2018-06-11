@@ -12,7 +12,7 @@ Integrate [fzf](https://github.com/junegunn/fzf) functionality into [fish](https
 All functions
 
 * are lazily-loaded to keep shell startup time down
-* have key bindings that are compatible with fish's default bindings
+* have preset but configurable key bindings
 
 Heavily adapted from @hauleth's PR.
 
