@@ -1,7 +1,5 @@
 # Fzf
 
-[![Slack Room][slack-badge]][slack-link]
-
 Integrate [fzf](https://github.com/junegunn/fzf) functionality into [fish](https://github.com/fish-shell/fish-shell)! Includes handy functions to do the following using `fzf`
 
 * command tab completion
@@ -22,7 +20,7 @@ Note that the `fzf` utility has its [own out-of-the-box fish plugin](https://git
 With [fisherman]
 
 ```
-fisher fzf
+fisher jethrokuan/fzf
 ```
 
 ## Requirements
@@ -86,6 +84,4 @@ documented.
 | `FZF_COMPLETE`              | Enable fzf for fish tab completion.                            | `set -U FZF_COMPLETE 1`                               |
 
 [tmux]:https://tmux.github.io/
-[slack-link]: https://fisherman-wharf.herokuapp.com
-[slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
-[fisherman]: https://github.com/fisherman/fisherman
+[fisherman]: https://github.com/jorgebucaran/fisher
