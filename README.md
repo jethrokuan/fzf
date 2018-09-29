@@ -23,6 +23,12 @@ With [fisherman]
 fisher jethrokuan/fzf
 ```
 
+With [oh-my-fish]
+
+```
+omf install https://github.com/jethrokuan/fzf
+```
+
 ## Requirements
 
 * fish version: `>=2.4.0`
@@ -85,3 +91,4 @@ documented.
 
 [tmux]:https://tmux.github.io/
 [fisherman]: https://github.com/jorgebucaran/fisher
+[oh-my-fish]: https://github.com/oh-my-fish/oh-my-fish
