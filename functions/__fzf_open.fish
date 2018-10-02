@@ -11,9 +11,20 @@ function __fzf_open -d "Open files and directories."
     set -l dir $commandline[1]
     set -l fzf_query $commandline[2]
 
-    set -l options "e/editor"
+    set -l options "e/editor" "p/preview=?"
 
     argparse $options -- $argv
+
+    set -l preview_cmd
+    if set -q _flag_preview
+        set -l preview_pager_cmd
+        if test -n "$_flag_preview"
+            set preview_pager_cmd $_flag_preview
+        else
+            set preview_pager_cmd "head -100 {}"
+        end
+        set preview_cmd "--preview \"if test -d {}; ls --color=always -Al {}; else; $preview_pager_cmd; end\""
+    end
 
     set -q FZF_OPEN_COMMAND
     or set -l FZF_OPEN_COMMAND "
@@ -22,7 +33,7 @@ function __fzf_open -d "Open files and directories."
     -o -type d -print \
     -o -type l -print 2> /dev/null | sed 's@^\./@@'"
 
-    eval "$FZF_OPEN_COMMAND | "(__fzfcmd) "-m $FZF_DEFAULT_OPTS $FZF_OPEN_OPTS --query \"$fzf_query\"" | read -l select
+    eval "$FZF_OPEN_COMMAND | "(__fzfcmd) "$preview_cmd -m $FZF_DEFAULT_OPTS $FZF_OPEN_OPTS --query \"$fzf_query\"" | read -l select
 
     # set how to open
     set -l open_cmd
