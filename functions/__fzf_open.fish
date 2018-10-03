@@ -16,14 +16,8 @@ function __fzf_open -d "Open files and directories."
     argparse $options -- $argv
 
     set -l preview_cmd
-    if set -q _flag_preview
-        set -l preview_pager_cmd
-        if test -n "$_flag_preview"
-            set preview_pager_cmd $_flag_preview
-        else
-            set preview_pager_cmd "head -100 {}"
-        end
-        set preview_cmd "--preview \"if test -d {}; ls --color=always -Al {}; else; $preview_pager_cmd; end\""
+    if set -q FZF_ENABLE_OPEN_PREVIEW
+        set preview_cmd "--preview-window=right:wrap --preview=\"fish -c \\\"__fzf_complete_preview '{}'\\\"\""
     end
 
     set -q FZF_OPEN_COMMAND
@@ -48,7 +42,7 @@ function __fzf_open -d "Open files and directories."
 
     set -l open_status 0
     if not test -z "$select"
-        commandline "$open_cmd $select" ;and commandline -f execute
+        commandline "$open_cmd \"$select\"" ;and commandline -f execute
         set open_status $status
     end
 
