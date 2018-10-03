@@ -67,14 +67,16 @@ documented.
 
 
 ## Commands
-| Variable                       | Remarks                                               | Example                                                       |
-| ------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------- |
-| `FZF_FIND_FILE_COMMAND`        | Modify the command used to generate the list of files | `set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"` |
-| `FZF_CD_COMMAND`               | Similar to ^                                          | Similar to ^                                                  |
-| `FZF_CD_WITH_HIDDEN_COMMAND`   | Similar to ^                                          | Similar to ^                                                  |
-| `FZF_FIND_AND_EXECUTE_COMMAND` | Similar to ^                                          | Similar to ^                                                  |
-| `FZF_REVERSE_ISEARCH_COMMAND`  | Similar to ^                                          | Similar to ^                                                  |
-| `FZF_OPEN_COMMAND`             | Similar to ^                                          | Similar to ^                                                  |
+| Variable                       | Remarks                                                     | Example                                                       |
+| ------------------------------ | ------------------------------------------------------------| ------------------------------------------------------------- |
+| `FZF_FIND_FILE_COMMAND`        | Modify the command used to generate the list of files       | `set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"` |
+| `FZF_CD_COMMAND`               | Similar to ^                                                | Similar to ^                                                  |
+| `FZF_CD_WITH_HIDDEN_COMMAND`   | Similar to ^                                                | Similar to ^                                                  |
+| `FZF_FIND_AND_EXECUTE_COMMAND` | Similar to ^                                                | Similar to ^                                                  |
+| `FZF_REVERSE_ISEARCH_COMMAND`  | Similar to ^                                                | Similar to ^                                                  |
+| `FZF_OPEN_COMMAND`             | Similar to ^                                                | Similar to ^                                                  |
+| `FZF_PREVIEW_FILE_COMMAND`     | Modify the command used to generate preview of files.       | `set -U FZF_PREVIEW_FILE_COMMAND "head -n 10"`                |
+| `FZF_PREVIEW_DIR_COMMAND`      | Modify the command used to generate preview of directories. | `set -U FZF_PREVIEW_FILE_COMMAND "ls"`                        |
 
 ## Variables
 | Variable                    | Remarks                                                        | Example                                               |
@@ -88,6 +90,7 @@ documented.
 | `FZF_OPEN_OPTS`             | Similar to ^                                                   | Similar to ^                                          |
 | `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                   | `set -U FZF_TMUX 1`                                   |
 | `FZF_COMPLETE`              | Enable fzf for fish tab completion.                            | `set -U FZF_COMPLETE 1`                               |
+| `FZF_ENABLE_OPEN_PREVIEW`   | Enable preview window open command.                            | `set -U FZF_ENABLE_OPEN_PREVIEW 1`                    |
 
 [tmux]:https://tmux.github.io/
 [fisherman]: https://github.com/jorgebucaran/fisher
