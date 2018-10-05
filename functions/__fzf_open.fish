@@ -17,7 +17,7 @@ function __fzf_open -d "Open files and directories."
 
     set -l preview_cmd
     if set -q FZF_ENABLE_OPEN_PREVIEW
-        set preview_cmd "--preview-window=right:wrap --preview=\"fish -c \\\"__fzf_complete_preview '{}'\\\"\""
+        set preview_cmd "--preview-window=right:wrap --preview='fish -c \"__fzf_complete_preview {}\"'"
     end
 
     set -q FZF_OPEN_COMMAND
@@ -27,7 +27,7 @@ function __fzf_open -d "Open files and directories."
     -o -type d -print \
     -o -type l -print 2> /dev/null | sed 's@^\./@@'"
 
-    eval "$FZF_OPEN_COMMAND | "(__fzfcmd) "$preview_cmd -m $FZF_DEFAULT_OPTS $FZF_OPEN_OPTS --query \"$fzf_query\"" | read -l select
+    eval "$FZF_OPEN_COMMAND | "(__fzfcmd) $preview_cmd "-m $FZF_DEFAULT_OPTS $FZF_OPEN_OPTS --query \"$fzf_query\"" | read -l select
 
     # set how to open
     set -l open_cmd
