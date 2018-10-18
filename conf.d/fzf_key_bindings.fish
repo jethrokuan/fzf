@@ -35,3 +35,7 @@ end
 if set -q FZF_COMPLETE
     bind \t '__fzf_complete'
 end
+
+function fzf_key_bindings_uninstall -e fzf_key_bindings_uninstall
+  # Erase key bindings here.
+end
