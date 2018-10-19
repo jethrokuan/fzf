@@ -51,7 +51,7 @@ function __fzf_open -d "Open files and directories."
 
     set -l open_status 0
     if not test -z "$select"
-        commandline "$open_cmd \"$select\"" ;and commandline -f execute
+        commandline "$open_cmd \"$select\"&;disown" ;and commandline -f execute
         set open_status $status
     end
 
