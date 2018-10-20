@@ -11,11 +11,11 @@ function __fzf_open -d "Open files and directories."
     set -l dir $commandline[1]
     set -l fzf_query $commandline[2]
 
-    # Fish shell version >= v2.7, use argparse
-    if type -q argparse
-        set -l options "e/editor" "p/preview=?"
-        argparse $options -- $argv
-    else # Fallback for fish shell version < 2.7
+    if not type -q argparse
+        set created_argparse
+        function argparse
+            functions -e argparse # deletes itself
+        end
         if contains -- --editor $argv; or contains -- -e $argv
             set _flag_editor "yes"
         end
@@ -23,6 +23,9 @@ function __fzf_open -d "Open files and directories."
             set _flag_preview "yes"
         end
     end
+
+    set -l options "e/editor" "p/preview=?"
+    argparse $options -- $argv
 
     set -l preview_cmd
     if set -q FZF_ENABLE_OPEN_PREVIEW
