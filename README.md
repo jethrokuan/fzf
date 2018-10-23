@@ -73,8 +73,6 @@ documented.
 | `FZF_FIND_FILE_COMMAND`        | Modify the command used to generate the list of files       | `set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"` |
 | `FZF_CD_COMMAND`               | Similar to ^                                                | Similar to ^                                                  |
 | `FZF_CD_WITH_HIDDEN_COMMAND`   | Similar to ^                                                | Similar to ^                                                  |
-| `FZF_FIND_AND_EXECUTE_COMMAND` | Similar to ^                                                | Similar to ^                                                  |
-| `FZF_REVERSE_ISEARCH_COMMAND`  | Similar to ^                                                | Similar to ^                                                  |
 | `FZF_OPEN_COMMAND`             | Similar to ^                                                | Similar to ^                                                  |
 | `FZF_PREVIEW_FILE_COMMAND`     | Modify the command used to generate preview of files.       | `set -U FZF_PREVIEW_FILE_COMMAND "head -n 10"`                |
 | `FZF_PREVIEW_DIR_COMMAND`      | Modify the command used to generate preview of directories. | `set -U FZF_PREVIEW_FILE_COMMAND "ls"`                        |
@@ -87,7 +85,6 @@ documented.
 | `FZF_FIND_FILE_OPTS`        | Pass in additional arguments to the fzf command for find file | `set -U FZF_FIND_FILE_OPTS "--reverse --inline-info"` |
 | `FZF_CD_OPTS`               | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_CD_WITH_HIDDEN_OPTS`   | Similar to ^                                                  | Similar to ^                                          |
-| `FZF_FIND_AND_EXECUTE_OPTS` | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_OPEN_OPTS`             | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                  | `set -U FZF_TMUX 1`                                   |
