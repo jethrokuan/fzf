@@ -32,7 +32,7 @@ omf install https://github.com/jethrokuan/fzf
 
 ## Requirements
 
-- [fish](https://github.com/fish-shell/fish-shell) `>=2.6.0`
+- [fish](https://github.com/fish-shell/fish-shell) `>=2.4.0`
 - [fzf](https://github.com/junegunn/fzf) `>0.11.3`
 
 ## About the fzf binary
