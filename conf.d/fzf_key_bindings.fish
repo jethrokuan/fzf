@@ -37,5 +37,8 @@ if set -q FZF_COMPLETE
 end
 
 function fzf_key_bindings_uninstall -e fzf_key_bindings_uninstall
-  # Erase key bindings here.
+    set -l _bindings (bind -a | sed -En "s/(')?__fzf.*\$//p" | sed 's/bind/bind -e/')
+    for binding in $_bindings
+        eval $binding
+    end
 end
