@@ -88,9 +88,14 @@ documented.
 | `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_OPEN_OPTS`             | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                  | `set -U FZF_TMUX 1`                                   |
-| `FZF_COMPLETE`              | Enable fzf for fish tab completion.                           | `set -U FZF_COMPLETE 1`                               |
 | `FZF_ENABLE_OPEN_PREVIEW`   | Enable preview window open command.                           | `set -U FZF_ENABLE_OPEN_PREVIEW 1`                    |
 
+## FZF Tab Completions
+This package ships with a `fzf` widget for fancy tab completions.
+Please see [the wiki
+page](https://github.com/jethrokuan/fzf/wiki/FZF-Tab-Completions) for details.
+
+###
 [tmux]: https://tmux.github.io/
 [fisher]: https://github.com/jorgebucaran/fisher
 [oh-my-fish]: https://github.com/oh-my-fish/oh-my-fish
