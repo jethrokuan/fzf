@@ -70,7 +70,7 @@ documented.
 
 | Variable                       | Remarks                                                     | Example                                                       |
 | ------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------- |
-| `FZF_FIND_FILE_COMMAND`        | Modify the command used to generate the list of files       | `set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"` or `set -U FZF_FIND_FILE_COMMAND "fd --type f . \$dir"` |
+| `FZF_FIND_FILE_COMMAND`        | Modify the command used to generate the list of files       | `set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"` or `set -U FZF_FIND_FILE_COMMAND "fd --type f . \$dir"` (`$dir` represents the directory being completed) |
 | `FZF_CD_COMMAND`               | Similar to ^                                                | Similar to ^                                                  |
 | `FZF_CD_WITH_HIDDEN_COMMAND`   | Similar to ^                                                | Similar to ^                                                  |
 | `FZF_OPEN_COMMAND`             | Similar to ^                                                | Similar to ^                                                  |
