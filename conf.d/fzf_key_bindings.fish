@@ -34,6 +34,9 @@ end
 
 if set -q FZF_COMPLETE
     bind \t '__fzf_complete'
+    if bind -M insert >/dev/null 2>/dev/null
+        bind -M insert \t '__fzf_complete'
+    end
 end
 
 function fzf_key_bindings_uninstall -e fzf_key_bindings_uninstall
