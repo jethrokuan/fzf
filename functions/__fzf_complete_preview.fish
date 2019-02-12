@@ -11,18 +11,20 @@ function __fzf_complete_preview -d 'generate preview for completion widget.
         echo $argv[1]
     end
 
+    set -l path (string replace "~" $HOME $argv[1])
+
     # list directories on preview
-    if test -d "$argv[1]"
-        eval $FZF_PREVIEW_DIR_CMD (string escape $argv[1])
+    if test -d "$path"
+        eval $FZF_PREVIEW_DIR_CMD (string escape $path)
     end
 
     # show ten lines of non-binary files preview
-    if test -f "$argv[1]"; and grep -qI . "$argv[1]"
-        eval $FZF_PREVIEW_FILE_CMD (string escape $argv[1])
+    if test -f "$path"; and grep -qI . "$path"
+        eval $FZF_PREVIEW_FILE_CMD (string escape $path)
     end
 
     # if fish knows about it, let it show info
-    type -q "$argv[1]" 2>/dev/null; and type -a "$argv[1]"
+    type -q "$path" 2>/dev/null; and type -a "$path"
 
     # show aditional data
     echo $argv[2]
