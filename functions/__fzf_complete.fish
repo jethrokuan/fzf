@@ -162,4 +162,7 @@ function __fzf_complete_opts -d 'fzf options for fish tab completion'
         case '*'
             echo $FZF_COMPLETE
     end
+    if set -q FZF_COMPLETE_OPTS
+        echo $FZF_COMPLETE_OPTS
+    end
 end
