@@ -106,6 +106,9 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
 end
 
 function __fzf_complete_opts_common
+    if set -q FZF_DEFAULT_OPTS
+        echo $FZF_DEFAULT_OPTS
+    end
     echo --cycle --reverse --inline-info
 end
 
