@@ -73,6 +73,7 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
 
         # exit if user canceled
         if test -z "$query" ;and test -z "$result"
+            commandline -f repaint
             return
         end
 
