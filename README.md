@@ -87,6 +87,7 @@ documented.
 | `FZF_CD_WITH_HIDDEN_OPTS`   | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_REVERSE_ISEARCH_OPTS`  | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_OPEN_OPTS`             | Similar to ^                                                  | Similar to ^                                          |
+| `FZF_COMPLETE_OPTS`         | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_TMUX`                  | Runs a tmux-friendly version of fzf instead.                  | `set -U FZF_TMUX 1`                                   |
 | `FZF_ENABLE_OPEN_PREVIEW`   | Enable preview window open command.                           | `set -U FZF_ENABLE_OPEN_PREVIEW 1`                    |
 
