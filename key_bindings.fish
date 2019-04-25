@@ -1,0 +1,1 @@
+conf.d/fzf_key_bindings.fish
