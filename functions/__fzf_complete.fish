@@ -98,7 +98,7 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
             case '~'
                 commandline -t -- (string sub -s 2 (string escape -n -- $r))
             case '*'
-                commandline -t -- (string escape -n -- $r)
+                commandline -t -- $r
         end
         [ $i -lt (count $result) ]; and commandline -i ' '
     end
