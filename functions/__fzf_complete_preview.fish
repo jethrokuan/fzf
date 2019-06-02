@@ -11,7 +11,7 @@ function __fzf_complete_preview -d 'generate preview for completion widget.
         echo $argv[1]
     end
 
-    set -l path (string replace "~" $HOME $argv[1])
+    set -l path (string replace "~" $HOME -- $argv[1])
 
     # list directories on preview
     if test -d "$path"
