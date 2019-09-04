@@ -45,12 +45,12 @@ See the [fzf documentation](https://github.com/junegunn/fzf#installation) for in
 
 | Legacy      | New Keybindings | Remarks                                         |
 | ----------- | --------------- | ----------------------------------------------- |
-| Ctrl-t      | Ctrl-f          | Find a file.                                    |
+| Ctrl-t      | Ctrl-o          | Find a file.                                    |
 | Ctrl-r      | Ctrl-r          | Search through command history.                 |
-| Alt-c       | Alt-o           | cd into sub-directories (recursively searched). |
-| Alt-Shift-c | Alt-Shift-o     | cd into sub-directories, including hidden ones. |
-| Ctrl-o      | Ctrl-o          | Open a file/dir using default editor ($EDITOR)  |
-| Ctrl-g      | Ctrl-g          | Open a file/dir using xdg-open or open command  |
+| Alt-c       | Alt-c           | cd into sub-directories (recursively searched). |
+| Alt-Shift-c | Alt-Shift-c     | cd into sub-directories, including hidden ones. |
+| Ctrl-o      | Alt-o           | Open a file/dir using default editor ($EDITOR)  |
+| Ctrl-g      | Alt-Shift-o     | Open a file/dir using xdg-open or open command  |
 
 Legacy keybindings are kept by default, but these have conflict with
 keybindings in fish 2.4.0. If you want to use the new keybindings,
