@@ -19,7 +19,7 @@ else
     bind \cr '__fzf_reverse_isearch'
     bind \ec '__fzf_cd'
     bind \eC '__fzf_cd --hidden'
-    bind \eo '__fzf_open'
+    bind \eO '__fzf_open'
     bind \eo '__fzf_open --editor'
 
     if bind -M insert >/dev/null 2>/dev/null
@@ -27,7 +27,7 @@ else
         bind -M insert \cr '__fzf_reverse_isearch'
         bind -M insert \ec '__fzf_cd'
         bind -M insert \eC '__fzf_cd --hidden'
-        bind -M insert \eo '__fzf_open'
+        bind -M insert \eO '__fzf_open'
         bind -M insert \eo '__fzf_open --editor'
     end
 end
