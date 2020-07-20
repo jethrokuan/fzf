@@ -102,6 +102,9 @@ This package ships with a `fzf` widget for fancy tab completions.
 Please see [the wiki
 page](https://github.com/jethrokuan/fzf/wiki/FZF-Tab-Completions) for details.
 
+## Alternatives
+[@patrickf3139](https://github.com/patrickf3139) has written a newer fzf plugin called [fzf-fish-integration](https://github.com/patrickf3139/fzf-fish-integration) with simpler but different features. It lacks Tmux support and tab completion but includes functions for searching git log and browsing shell variables using git log. Additionally, moving forward, it is more likely to be maintained. You can read more about the differences between it and this plugin in the readme of `fzf-fish-integration` [here](https://github.com/patrickf3139/fzf-fish-integration#prior-art).
+
 ###
 [tmux]: https://tmux.github.io/
 [fisher]: https://github.com/jorgebucaran/fisher
