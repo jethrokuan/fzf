@@ -14,7 +14,7 @@ All functions
 
 Heavily adapted from @hauleth's PR.
 
-Note that the `fzf` utility has its [own out-of-the-box fish package](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish). What sets this package apart is that it has a couple more integrations, most notably tab completion, and will probably be updated more frequently. They are not compatible so either use one or the other.
+Note that the `fzf` utility has its [own out-of-the-box fish package](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish). What sets this package apart is that it has a couple more integrations, most notably tab completion, and will probably be updated more frequently. They are not compatible so use one or the other.
 
 ## Installation
 
