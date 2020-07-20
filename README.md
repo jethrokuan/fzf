@@ -60,6 +60,12 @@ enter the following into your terminal:
 set -U FZF_LEGACY_KEYBINDINGS 0
 ```
 
+You can disable default keybindings altogether by running:
+
+```
+set -U FZF_DISABLE_KEYBINDINGS 1
+```
+
 NOTE: On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can
 send the right escape sequence with Esc-c. If you configure the option
 key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys >
