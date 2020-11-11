@@ -42,10 +42,8 @@ if test "$FZF_DISABLE_KEYBINDINGS" -ne 1
 end
 
 function fzf_key_bindings_uninstall -e fzf_key_bindings_uninstall
-    # disabled until we figure out a sensible way to ensure user overrides
-    # are not erased
-    # set -l _bindings (bind -a | sed -En "s/(')?__fzf.*\$//p" | sed 's/bind/bind -e/')
-    # for binding in $_bindings
-    #     eval $binding
-    # end
+    set -l _bindings (bind -a | sed -En "s/(')?__fzf.*\$//p" | sed 's/bind/bind -e/')
+    for binding in $_bindings
+        eval $binding
+    end
 end
