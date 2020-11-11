@@ -14,10 +14,10 @@ All functions
 
 ## Installation
 
-With [fisher]
+With [Fisher]
 
 ```
-fisher add jethrokuan/fzf
+fisher install jethrokuan/fzf
 ```
 
 With [oh-my-fish]
@@ -104,7 +104,7 @@ page](https://github.com/jethrokuan/fzf/wiki/FZF-Tab-Completions) for details.
 
 ###
 [tmux]: https://tmux.github.io/
-[fisher]: https://github.com/jorgebucaran/fisher
+[Fisher]: https://github.com/jorgebucaran/fisher
 [oh-my-fish]: https://github.com/oh-my-fish/oh-my-fish
 
 ## License
