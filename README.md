@@ -1,6 +1,6 @@
 # Fzf
 
-Integrate [fzf](https://github.com/junegunn/fzf) functionality into [fish](https://github.com/fish-shell/fish-shell)! Includes handy functions to do the following using `fzf`
+Integrate [fzf](https://github.com/junegunn/fzf) functionality into [Fish](https://github.com/fish-shell/fish-shell)! Includes handy functions to do the following using `fzf`:
 
 - command tab completion
 - search command history
@@ -20,18 +20,12 @@ With [Fisher]
 fisher install jethrokuan/fzf
 ```
 
-With [oh-my-fish]
-
-```
-omf install https://github.com/jethrokuan/fzf
-```
-
 ## Requirements
 
-- [fish](https://github.com/fish-shell/fish-shell) `>=2.4.0`
+- [Fish](https://github.com/fish-shell/fish-shell) `>=2.4.0`
 - [fzf](https://github.com/junegunn/fzf) `>0.11.3`
 
-## About the fzf binary
+## About the `fzf` binary
 
 This package will fail if the `fzf` binary is not detected in your `PATH`.
 
@@ -52,17 +46,17 @@ Legacy keybindings are kept by default, but these have conflict with
 keybindings in fish 2.4.0. If you want to use the new keybindings,
 enter the following into your terminal:
 
-```
+```fish
 set -U FZF_LEGACY_KEYBINDINGS 0
 ```
 
 You can disable default keybindings altogether by running:
 
-```
+```fish
 set -U FZF_DISABLE_KEYBINDINGS 1
 ```
 
-NOTE: On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can
+> **Note:** On OS X, Alt-c (Option-c) types ç by default. In iTerm2, you can
 send the right escape sequence with Esc-c. If you configure the option
 key to act as +Esc (iTerm2 Preferences > Profiles > Default > Keys >
 Left option (⌥) acts as: > +Esc), then alt-c will work for fzf as
@@ -94,18 +88,19 @@ documented.
 | `FZF_ENABLE_OPEN_PREVIEW`   | Enable preview window open command.                           | `set -U FZF_ENABLE_OPEN_PREVIEW 1`                    |
 
 ## FZF Tab Completions
+
 This package ships with a `fzf` widget for fancy tab completions.
-Please see [the wiki
-page](https://github.com/jethrokuan/fzf/wiki/FZF-Tab-Completions) for details.
+
+Please see [the wiki page](https://github.com/jethrokuan/fzf/wiki/FZF-Tab-Completions) for details.
 
 ## Alternatives
-- [fzf.fish](https://github.com/patrickf3139/fzf.fish) is a newer fzf plugin with very similar features. It lacks Tmux support and fzf tab completion but includes functions for searching git log, git status, and browsing shell variables using fzf. Additionally, it is more likely to be maintained going forward. You can read more about the differences between it and this plugin in the readme of `fzf.fish` [here](https://github.com/patrickf3139/fzf.fish#prior-art).
-- The `fzf` utility ships with its [own out-of-the-box fish integration](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish). What sets this package apart is that it has a couple more integrations, most notably tab completion. They are not compatible so use one or the other.
+
+- [fzf.fish](https://github.com/patrickf3139/fzf.fish) is a newer fzf plugin with very similar features. It lacks Tmux support and fzf tab completion, but includes functions for searching git log, git status, and browsing shell variables using fzf. Additionally, it is more likely to be maintained going forward. You can read more about the differences between it and this plugin in the readme of `fzf.fish` [here](https://github.com/patrickf3139/fzf.fish#prior-art).
+- The `fzf` utility ships with its [own out-of-the-box fish integration](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish). What sets this package apart is that it has better shell integration, most notably tab completions. They are not compatible so use one or the other.
 
 ###
 [tmux]: https://tmux.github.io/
 [Fisher]: https://github.com/jorgebucaran/fisher
-[oh-my-fish]: https://github.com/oh-my-fish/oh-my-fish
 
 ## License
 
