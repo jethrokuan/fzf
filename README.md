@@ -70,8 +70,10 @@ documented.
 | `FZF_CD_COMMAND`               | Similar to ^                                                | Similar to ^                                                  |
 | `FZF_CD_WITH_HIDDEN_COMMAND`   | Similar to ^                                                | Similar to ^                                                  |
 | `FZF_OPEN_COMMAND`             | Similar to ^                                                | Similar to ^                                                  |
-| `FZF_PREVIEW_FILE_CMD`     | Modify the command used to generate preview of files.       | `set -U FZF_PREVIEW_FILE_CMD "head -n 10"`                |
-| `FZF_PREVIEW_DIR_CMD`      | Modify the command used to generate preview of directories. | `set -U FZF_PREVIEW_DIR_CMD "ls"`                        |
+| `FZF_PREVIEW_FILE_CMD`         | Modify the command used to generate preview of files.       | `set -U FZF_PREVIEW_FILE_CMD "head -n 10"`                    |
+| `FZF_PREVIEW_DIR_CMD`          | Modify the command used to generate preview of directories. | `set -U FZF_PREVIEW_DIR_CMD "ls"`                             |
+| `FZF_CMD`                      | Modify the finder program used to search                    | `set -U FZF_CMD fzf`                                          |
+| `FZF_TMUX_CMD`                 | Modify the finder program used to search (tmux-friendly)    | `set -U FZF_TMUX_CMD fzf-tmux`                                |
 
 ## Variables
 
