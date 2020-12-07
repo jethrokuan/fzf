@@ -5,7 +5,7 @@ set -q FZF_DISABLE_KEYBINDINGS; or set -U FZF_DISABLE_KEYBINDINGS 0
 set -q FZF_PREVIEW_FILE_CMD; or set -U FZF_PREVIEW_FILE_CMD "head -n 10"
 set -q FZF_PREVIEW_DIR_CMD; or set -U FZF_PREVIEW_DIR_CMD "ls"
 set -q FZF_CMD; or set -U FZF_CMD "fzf"
-set -q FZF_TMUX_CMD; or set -U FZF_CMD "fzf-tmux"
+set -q FZF_TMUX_CMD; or set -U FZF_TMUX_CMD "fzf-tmux"
 
 function fzf_uninstall -e fzf_uninstall
     # disabled until we figure out a sensible way to ensure user overrides
