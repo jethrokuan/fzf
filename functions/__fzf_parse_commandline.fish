@@ -2,14 +2,14 @@ function __fzf_parse_commandline -d 'Parse the current command line token and re
     # eval is used to do shell expansion on paths
     set -l commandline (eval "printf '%s' "(commandline -t))
 
-    if [ -z $commandline ]
+    if test -z $commandline
         # Default to current directory with no --query
         set dir '.'
         set fzf_query ''
     else
         set dir (__fzf_get_dir $commandline)
 
-        if [ "$dir" = "." -a (string sub -l 1 $commandline) != '.' ]
+        if test "$dir" = "." -a (string sub -l 1 $commandline) != '.'
             # if $dir is "." but commandline is not a relative path, this means no file path found
             set fzf_query $commandline
         else
