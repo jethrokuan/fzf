@@ -40,7 +40,7 @@ if test "$FZF_DISABLE_KEYBINDINGS" -ne 1
         end
     end
 
-    if ! bind --user \t >/dev/null 2>/dev/null
+    if not bind --user \t >/dev/null 2>/dev/null
         if set -q FZF_COMPLETE
             bind \t '__fzf_complete'
             if bind -M insert >/dev/null 2>/dev/null
