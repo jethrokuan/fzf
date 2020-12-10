@@ -44,8 +44,7 @@ if test "$FZF_DISABLE_KEYBINDINGS" -ne 1
 end
 
 function fzf_key_bindings_uninstall -e fzf_key_bindings_uninstall
-    set -l _bindings (bind -a | sed -En "s/(')?__fzf.*\$//p" | sed 's/bind/bind -e/')
-    for binding in $_bindings
-        eval $binding
-    end
+    bind --user \
+        | string replace --filter --regex -- "bind (.+)( '?__fzf.*)" 'bind -e $1' \
+        | source
 end
