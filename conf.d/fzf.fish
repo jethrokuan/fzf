@@ -14,7 +14,7 @@ if test "$FZF_DISABLE_KEYBINDINGS" -ne 1
         bind \cg '__fzf_open'
         bind \co '__fzf_open --editor'
 
-        if bind -M insert >/dev/null 2>/dev/null
+        if test "$fish_key_bindings" = fish_vi_key_bindings
             bind -M insert \ct '__fzf_find_file'
             bind -M insert \cr '__fzf_reverse_isearch'
             bind -M insert \ec '__fzf_cd'
@@ -30,7 +30,7 @@ if test "$FZF_DISABLE_KEYBINDINGS" -ne 1
         bind \eO '__fzf_open'
         bind \eo '__fzf_open --editor'
 
-        if bind -M insert >/dev/null 2>/dev/null
+        if test "$fish_key_bindings" = fish_vi_key_bindings
             bind -M insert \co '__fzf_find_file'
             bind -M insert \cr '__fzf_reverse_isearch'
             bind -M insert \ec '__fzf_cd'
@@ -43,7 +43,7 @@ if test "$FZF_DISABLE_KEYBINDINGS" -ne 1
     if not bind --user \t >/dev/null 2>/dev/null
         if set -q FZF_COMPLETE
             bind \t '__fzf_complete'
-            if bind -M insert >/dev/null 2>/dev/null
+            if test "$fish_key_bindings" = fish_vi_key_bindings
                 bind -M insert \t '__fzf_complete'
             end
         end
