@@ -10,8 +10,17 @@ function __fzf_find_file -d "List files and folders"
     -o -type d -print \
     -o -type l -print 2> /dev/null | sed 's@^\./@@'"
 
+    if set -q FZF_ENABLE_FILE_PREVIEW
+        if test (echo $FZF_DEFAULT_OPTS | grep preview-window)
+            set preview_cmd "--preview='fish -c \"__fzf_complete_preview {}\"'"
+        else
+            set preview_cmd "--preview-window=right:wrap --preview='fish -c \"__fzf_complete_preview {}\"'"
+        end
+    else
+        set preview_cmd "--preview-window hidden"
+    end
     begin
-        eval "$FZF_FIND_FILE_COMMAND | "(__fzfcmd) "-m $FZF_DEFAULT_OPTS $FZF_FIND_FILE_OPTS --query \"$fzf_query\"" | while read -l s; set results $results $s; end
+        eval "$FZF_FIND_FILE_COMMAND | "(__fzfcmd) "-m $FZF_DEFAULT_OPTS $FZF_FIND_FILE_OPTS --query \"$fzf_query\" $preview_cmd" | while read -l s; set results $results $s; end
     end
 
     if test -z "$results"

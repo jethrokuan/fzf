@@ -122,7 +122,11 @@ end
 
 function __fzf_complete_opts_preview
     set -l file (status -f)
-    echo --with-nth=1 --preview-window=right:wrap --preview="fish\ '$file'\ __fzf_complete_preview\ '{1}'\ '{2..}'"
+    if test (echo $FZF_DEFAULT_OPTS | grep preview-window)
+        echo --with-nth=1 --preview="fish\ '$file'\ __fzf_complete_preview\ '{1}'\ '{2..}'"
+    else
+        echo --with-nth=1 --preview-window=right:wrap --preview="fish\ '$file'\ __fzf_complete_preview\ '{1}'\ '{2..}'"
+    end
 end
 
 test "$argv[1]" = "__fzf_complete_preview"; and __fzf_complete_preview $argv[2..3]
@@ -140,6 +144,7 @@ end
 
 function __fzf_complete_opts_2 -d 'single selection with preview and tab walks'
     __fzf_complete_opts_1
+    __fzf_complete_opts_preview
     __fzf_complete_opts_tab_walks
 end
 
@@ -153,6 +158,7 @@ function __fzf_complete_opts -d 'fzf options for fish tab completion'
     switch $FZF_COMPLETE
         case 0
             __fzf_complete_opts_0
+            echo --preview-window hidden
         case 1
             __fzf_complete_opts_1
         case 2
