@@ -83,7 +83,7 @@ Please see [the wiki page](https://github.com/jethrokuan/fzf/wiki/FZF-Tab-Comple
 
 ## Alternatives
 
-- [fzf.fish](https://github.com/patrickf3139/fzf.fish) is a newer fzf plugin with very similar features. It lacks Tmux support and fzf tab completion, but includes functions for searching git log, git status, and browsing shell variables using fzf. Additionally, it is more likely to be maintained going forward. You can read more about the differences between it and this plugin in the README of `fzf.fish` [here](https://github.com/patrickf3139/fzf.fish#prior-art).
+- [fzf.fish](https://github.com/patrickf3139/fzf.fish) is a newer fzf plugin with very similar features. It lacks fzf tab completion but includes functions for searching git log, git status, and browsing shell variables using fzf. Additionally, it is more likely to be maintained going forward. You can read more about the differences between it and this plugin on this `fzf.fish` [Wiki page](https://github.com/PatrickF1/fzf.fish/wiki/Prior-Art).
 - The `fzf` utility ships with its [own out-of-the-box Fish integration](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish). What sets this package apart is that it has better shell integration, most notably tab completions. They are not compatible so use one or the other.
 
 [tmux]: https://tmux.github.io/
