@@ -36,7 +36,16 @@ function __fzf_cd -d "Change directory"
         set COMMAND $FZF_CD_COMMAND
     end
 
-    eval "$COMMAND | "(__fzfcmd)" +m $FZF_DEFAULT_OPTS $FZF_CD_OPTS --query \"$fzf_query\"" | read -l select
+    if set -q FZF_ENABLE_CD_PREVIEW
+        if test (echo $FZF_DEFAULT_OPTS | grep preview-window)
+            set preview_cmd "--preview='fish -c \"__fzf_complete_preview {}\"'"
+        else
+            set preview_cmd "--preview-window=right:wrap --preview='fish -c \"__fzf_complete_preview {}\"'"
+        end
+    else
+        set preview_cmd "--preview-window hidden"
+    end
+    eval "$COMMAND | "(__fzfcmd)" +m $FZF_DEFAULT_OPTS $FZF_CD_OPTS --query \"$fzf_query\" $preview_cmd" | read -l select
 
     if not test -z "$select"
         builtin cd "$select"

@@ -74,6 +74,8 @@ set -U FZF_DISABLE_KEYBINDINGS 1
 | `FZF_COMPLETE_OPTS`        | Similar to ^                                                  | Similar to ^                                          |
 | `FZF_TMUX`                 | Runs a tmux-friendly version of fzf instead.                  | `set -U FZF_TMUX 1`                                   |
 | `FZF_ENABLE_OPEN_PREVIEW`  | Enable preview window open command.                           | `set -U FZF_ENABLE_OPEN_PREVIEW 1`                    |
+| `FZF_ENABLE_CD_PREVIEW`    | Enable preview window cd command.                             | `set -U FZF_ENABLE_CD_PREVIEW 1`                      |
+| `FZF_ENABLE_FILE_PREVIEW`  | Enable preview window find file command.                      | `set -U FZF_ENABLE_FILE_PREVIEW 1`                    |
 
 ## `fzf` Tab Completions
 
