@@ -58,7 +58,7 @@ function __fzf_complete -d 'fzf completion and print selection back to commandli
 
         set -l query
         string join -- \n $complist \
-        | eval (__fzfcmd) (string escape --no-quoted -- $initial_query) --print-query (__fzf_complete_opts) \
+        | eval (__fzfcmd) (string escape --no-quoted -- $initial_query) -1 --print-query (__fzf_complete_opts) \
         | cut -f1 \
         | while read -l r
             # first line is the user entered query
