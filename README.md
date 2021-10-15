@@ -36,7 +36,7 @@ fisher install jethrokuan/fzf
 | Ctrl-o      | Alt-o           | Open a file/dir using default editor ($EDITOR)  |
 | Ctrl-g      | Alt-Shift-o     | Open a file/dir using xdg-open or open command  |
 
-Legacy keybindings are kept by default, but these have conflict with key bindings in Fish 2.4.0. If you want to use the new keybindings, ƒenter the following into your terminal:
+Legacy keybindings are kept by default, but these have conflict with key bindings in Fish 2.4.0. If you want to use the new keybindings, enter the following into your terminal:
 
 ```fish
 set -U FZF_LEGACY_KEYBINDINGS 0
