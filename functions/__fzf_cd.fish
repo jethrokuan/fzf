@@ -39,7 +39,7 @@ function __fzf_cd -d "Change directory"
     eval "$COMMAND | "(__fzfcmd)" +m $FZF_DEFAULT_OPTS $FZF_CD_OPTS --query \"$fzf_query\"" | read -l select
 
     if not test -z "$select"
-        builtin cd "$select"
+        cd "$select"
 
         # Remove last token from commandline.
         commandline -t ""
